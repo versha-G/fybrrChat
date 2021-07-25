@@ -1,0 +1,327 @@
+:root {
+    --rowHeight: 98vh;
+    --colWidth: 98vw;
+    --rowHeightMob: 98vh;
+    --colWidthMob: 98vw;
+}
+
+/* latin-ext */
+@font-face {
+  font-family: 'Righteous';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/righteous/v9/1cXxaUPXBpj2rGoU7C9WhnGFucE.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Righteous';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/righteous/v9/1cXxaUPXBpj2rGoU7C9WiHGF.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+html, body{
+    height: 100%;
+}
+     
+body, footer{
+    margin: 0px;
+    padding: 0px;
+}
+
+#header{
+    overflow:hidden;
+    margin: 0px auto;
+    text-align:center;
+    position: relative;
+    font-size: 3vw; 
+    padding: 1.5vw; 
+    line-height: 10px;
+    font-family:  righteous , cursive !important;
+    background-color:#1b646e;
+    
+    
+}
+
+#fybrr{
+      font-weight: 550;
+      margin-top:10px;
+      text-shadow: 2px 2px 4px #000000
+}
+
+.copy-button{
+  float: right;
+  background-color:#f2f2f2;
+  border-radius: 30px 30px 30px 30px;
+  padding: 0.5vw 0.75vw 0.5vw 0.75vw;
+  border: none;
+  display:inline-block;
+  margin: 0.5vw 0.75vw 1vw 0.75vw;
+  -webkit-appearance: none;
+  font-size: 1vw !important;
+  cursor: pointer;
+}
+
+.copy-button:hover {
+   background-color:#cfcfcf;
+}
+
+.footer{
+    overflow:hidden;
+   /* margin: 0px auto;*/
+    /*line-height: 5vw;*/
+    position: fixed;
+    left:0;
+    bottom:0;
+    width:100%
+    background-color  #1b646e;
+    padding : 3.3vw 0vw; 
+    margin-top: 5em;
+}
+
+
+.buttons {
+    position: fixed;
+    width: 100%;
+    z-index: 9;
+    left: 0;
+    right: 0;
+    /*bottom: 3%;*/
+    /*margin-left: 5px;*/
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+     background-color:#1b646e;
+    
+}
+
+
+.buttons a {
+        width: 3vw !important; 
+        height: 3vw !important; 
+        line-height: 3vw !important;
+        font-size: 2vw;
+        cursor: pointer;
+        background-color:#f2f2f2;
+        margin-left:7px;
+        text-align: center;
+        border-style: solid;
+        border-color: white;
+        border-width: 4px;
+        border-radius: 4vw 4vw 4vw 4vw;
+        transform: translate(0,-50%)
+    }
+.buttons a:hover {
+    background-color: #cfcfcf;
+}
+
+#click{
+  display: none;
+}
+label{
+  position: absolute;
+  right: 1.5vw;
+  bottom: 1.5vw;
+  height: 3.3vw;
+  width: 3.3vw;
+  background-color:#f2f2f2;
+  text-align: center;
+  /*line-height: 55px;*/
+  border-radius: 50px;
+  font-size: 2vw;
+  color: #000;
+  cursor: pointer;
+  border-style: solid;
+  border-color: white;
+  border-width: 4px;
+  border-radius: 4vw 4vw 4vw 4vw;
+  transform: translate(10%,-5%)
+}
+label:hover{
+  background-color: #cfcfcf;
+}
+label i{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.4s ease;
+}
+label i.fas{
+  opacity: 0;
+  pointer-events: none;
+}
+#click:checked ~ label i.fas{
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%, -50%) rotate(180deg);
+}
+#click:checked ~ label i.fab{
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, -50%) rotate(180deg);
+}
+.wrapper{
+  position: absolute;
+  right: 30px;
+  bottom: 0px;
+  max-width: 600px;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0px 15px 20px rgba(0,0,0,0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.6s cubic-bezier(0.68,-0.55,0.265,1.55);
+}
+#click:checked ~ .wrapper{
+  opacity: 1;
+  bottom: 85px;
+  pointer-events: auto;
+}
+.wrapper .head-text{
+  line-height: 60px;
+  color: #fff;
+  border-radius: 15px 15px 0 0;
+  padding: 0 20px;
+  font-weight: 500;
+  font-size: 20px;
+  background: -webkit-linear-gradient(left, #284a54, #438194);
+}
+.wrapper .chat-box{
+  padding: 20px;
+  width: 400px;
+}
+.chat-box .desc-text{
+  color: #515365;
+  text-align: center;
+  line-height: 25px;
+  font-size: 17px;
+  font-weight: 500;
+}
+.chat-box form{
+  padding: 10px 15px;
+  margin: 20px 0;
+  border-radius: 25px;
+  border: 1px solid lightgrey;
+}
+.chat-box form .field{
+  height: 50px;
+  width: 100%;
+  margin-top: 20px;
+}
+.chat-box form .field:last-child{
+  margin-bottom: 15px;
+}
+form .field input,
+form .field button,
+form .textarea textarea{
+  width: 100%;
+  height: 100%;
+  padding-left: 20px;
+  border: 1px solid lightgrey;
+  outline: none;
+  border-radius: 25px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+form .field input:focus,
+form .textarea textarea:focus{
+  border-color: #fc83bb;
+}
+form .field input::placeholder,
+form .textarea textarea::placeholder{
+  color: silver;
+  transition: all 0.3s ease;
+}
+form .field input:focus::placeholder,
+form .textarea textarea:focus::placeholder{
+  color: lightgrey;
+}
+.chat-box form .textarea{
+  height: 70px;
+  width: 100%;
+}
+.chat-box form .textarea textarea{
+  height: 100%;
+  border-radius: 50px;
+  resize: none;
+  padding: 15px 20px;
+  font-size: 16px;
+}
+.chat-box form .field button{
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  background: -webkit-linear-gradient(left, #284a54, #438194);
+  transition: all 0.3s ease;
+}
+.chat-box form .field button:active{
+  transform: scale(0.97);
+}
+#usermsg {
+  flex: 1;
+  border-radius: 4px;
+  border: 1px solid lightgrey;
+  
+}
+#submitmsg,
+  #enter{
+    background: #428194;
+    color: white;
+    padding: 4px 10px;
+    font-weight: bold;
+    border-radius: 4px;
+    margin-bottom: 12px;
+    margin-right: 10px;
+  }
+  .chat-output {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    background: white;
+    flex-direction: column;
+    > div {
+      margin: 0 0 20px 0;
+    }
+    .user-message .message {
+        background: #428194;
+        color: white;
+      }
+    
+    .bot-message {
+      text-align: right;
+    }
+    .bot-message  .message {
+        background: #eee;
+      }
+    
+    .user-message .message {
+      display: inline-block;
+      padding: 12px 20px;
+      border-radius: 10px;
+    }
+  
+  .chat-input {
+    padding: 20px;
+    background: #eee;
+    border: 1px solid #ccc;
+    border-bottom: 0;
+  }
+  .chat-input.user-input {
+      width: 100%;
+      font-size: 2rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      padding: 8px;
+    }
+  
+  
+  
+   
+

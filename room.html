@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>fybrrChat</title>
+<link rel="stylesheet" href="C:\Users\VERSHA GUPTA\Desktop\fybrrChat\s.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+<script src="C:\Users\VERSHA GUPTA\Desktop\fybrrChat\room.js"> </script> 
+   <nav>
+      <div id="header">
+     <a id = "fybrr" style="color:white">fybrrChat</a>
+      </div>
+     <a class="copy-button" title="Copy meeting link" style="transform: translate(0,-170%)">Copy meeting link</a>
+     
+     
+   </nav>
+
+<!---Footer--->
+<footer class="footer">
+<div class="buttons">
+    <a id="audio" class="audio off"  title="Microphone On/Off" ><i onclick="muteUnmute(this)" class="fa fa-microphone-slash" aria-hidden="true"></i></a>
+
+    <a id="video" class="video off"  title="Camera On/Off"><i onclick="video(this)" class="fa fa-eye-slash" aria-hidden="true"></i></a>
+    <a id="btn-getDisplayMedia" class="screenshare off"  title="Screenshare"><i class="fa fa-laptop" aria-hidden="true"></i></a>
+    <a id="flip" class="flip off"  title="Toggle Camera"><i class="fa fa-refresh" aria-hidden="true"></i></a>
+    <a id="leave" class="leave off"  style="color:red";"font-size: 26px" title="Leave Room"><i class="fa fa-times" aria-hidden="true"></i></a>
+    
+     <input type="checkbox" id="click">
+    <label for="click">
+      <i class="fa fa-comment"></i>
+      <i class="fa fa-times"></i>
+    </label>
+<div class="wrapper">
+<div class="head-text">Chat-box</div>
+<div class="chat-box"></div>
+  <div class="chat-output" id="chat-output">
+    <div class="user-message">
+    <div class="message">Hi! What's up?</div>
+    </div>
+  </div>
+
+<div class="chat-input">
+  <form action="#0" id="user-input-form">
+    <input name="usermsg" id="usermsg" placeholder="Type message here." autocomplete="off" />
+    <input name="submitmsg" type="submit" id="submitmsg" value="Send" style="float: right;" /> 
+  </form>
+</div>
+</div>
+</footer>
+</body>
+</html>
+
+
